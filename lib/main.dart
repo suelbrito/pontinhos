@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pontinhos/components/pontuacao.dart';
 import 'package:pontinhos/components/quadro.dart';
+import 'package:pontinhos/utils/functions.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,6 +32,12 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  _jogar(id) {
+    setState(() {
+      jogar(id);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +45,12 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Column(children: const <Widget>[Quadro(), Pontuacao()]),
+        child: Column(children: <Widget>[
+          const SizedBox(height: 30),
+          Quadro(jogar: _jogar),
+          const SizedBox(height: 30),
+          Pontuacao()
+        ]),
       ),
     );
   }
