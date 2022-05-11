@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pontinhos/components/pontuacao.dart';
 import 'package:pontinhos/components/quadro.dart';
 
 void main() {
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Jogo dos pontinhos',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -36,8 +37,8 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: const Center(
-        child: Quadro(),
+      body: Center(
+        child: Column(children: const <Widget>[Quadro(), Pontuacao()]),
       ),
     );
   }
