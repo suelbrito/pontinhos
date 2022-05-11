@@ -49,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
           const SizedBox(height: 30),
           Quadro(jogar: _jogar),
           const SizedBox(height: 30),
-          Pontuacao()
+          const Pontuacao()
         ]),
       ),
     );
