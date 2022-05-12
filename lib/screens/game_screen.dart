@@ -60,7 +60,8 @@ class _GameScreenState extends State<GameScreen> {
                   alignment: Alignment.centerRight,
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                          minimumSize: const Size(30, 30)),
+                          minimumSize: const Size(30, 30),
+                          primary: Theme.of(context).colorScheme.secondary),
                       onPressed: _reiniciar,
                       child: const Icon(
                         Icons.settings_backup_restore,

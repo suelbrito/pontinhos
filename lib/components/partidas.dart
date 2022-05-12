@@ -6,7 +6,7 @@ import 'package:pontinhos/models/partida.dart';
 class Partidas extends StatelessWidget {
   const Partidas({Key? key}) : super(key: key);
 
-  List<Row> retornarPartidas() {
+  List<Row> retornarPartidas(context) {
     List<Row> partidas = [];
 
     for (Partida element in globals.partidas) {
@@ -76,7 +76,7 @@ class Partidas extends StatelessWidget {
           children: const <Widget>[
             Text(
               'Nada a exibir',
-              style: TextStyle(color: Colors.grey, fontSize: 20),
+              style: TextStyle(color: Colors.grey, fontSize: 25),
             )
           ]));
     }
@@ -86,7 +86,7 @@ class Partidas extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Row> partidas = retornarPartidas();
+    List<Row> partidas = retornarPartidas(context);
     return Column(
         mainAxisAlignment: MainAxisAlignment.center, children: partidas);
   }

@@ -17,8 +17,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Jogo dos pontinhos',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+          colorScheme: ThemeData().colorScheme.copyWith(
+                primary: Colors.cyan,
+                secondary: Colors.amber,
+                tertiary: Colors.cyan.shade900,
+                inversePrimary: Colors.white,
+              ),
+          fontFamily: 'RobotoCondensed',
+          textTheme: ThemeData().textTheme.copyWith(
+              headline1: const TextStyle(color: Colors.grey, fontSize: 25))),
       initialRoute: '/',
       routes: {
         AppRoutes.HOME: (ctx) => const TabsScreen(),
