@@ -6,7 +6,6 @@ import 'package:pontinhos/data/data.dart' as globals;
 import 'package:pontinhos/models/area.dart';
 import 'package:pontinhos/models/partida.dart';
 import 'package:pontinhos/models/risco.dart';
-import 'package:intl/intl.dart';
 
 void jogar(id, context) {
   // Caso o jogo já tenha terminado
@@ -28,8 +27,8 @@ void jogar(id, context) {
         id: id,
         usuario: globals.jogadorAtual,
         color: (globals.jogadorAtual == globals.User.me
-            ? Colors.blue
-            : Colors.red));
+            ? globals.cores[globals.indexCorUsuario]
+            : globals.cores[globals.indexCorRobot]));
     globals.riscos.add(risco);
     globals.jogadasRestantes.remove(id);
 
@@ -113,8 +112,8 @@ lancarJogadaRobot() {
                 id: id,
                 usuario: globals.jogadorAtual,
                 color: (globals.jogadorAtual == globals.User.me
-                    ? Colors.blue
-                    : Colors.red));
+                    ? globals.cores[globals.indexCorUsuario]
+                    : globals.cores[globals.indexCorRobot]));
             globals.riscos.add(risco);
             globals.jogadasRestantes.remove(id);
 
@@ -164,8 +163,8 @@ lancarJogadaRobot() {
           id: riscoId,
           usuario: globals.jogadorAtual,
           color: (globals.jogadorAtual == globals.User.me
-              ? Colors.blue
-              : Colors.red));
+              ? globals.cores[globals.indexCorUsuario]
+              : globals.cores[globals.indexCorRobot]));
       globals.riscos.add(risco);
       globals.jogadasRestantes.remove(riscoId);
 
@@ -264,8 +263,8 @@ void pintarArea(String quadrado) {
       id: quadrado,
       jogador: globals.jogadorAtual,
       color: (globals.jogadorAtual == globals.User.me
-          ? Colors.blue.shade300
-          : Colors.red.shade300));
+          ? globals.coresLight[globals.indexCorUsuario]
+          : globals.coresLight[globals.indexCorRobot]));
   globals.areas.add(area);
 
   globals.pontosUsuario = globals.pontosRobot = 0;

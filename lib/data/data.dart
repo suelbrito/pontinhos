@@ -5,6 +5,21 @@ import 'package:pontinhos/models/risco.dart';
 
 enum User { me, robot }
 
+const List<Color> cores = [
+  Colors.blue,
+  Colors.red,
+  Colors.amber,
+  Colors.purple,
+  Colors.pink
+];
+List<Color> coresLight = [
+  Colors.blue.shade300,
+  Colors.red.shade300,
+  Colors.amber.shade300,
+  Colors.purple.shade300,
+  Colors.pink.shade300
+];
+
 const Map<String, List<String>> riscosAreas = {
   "11": ["h11", "h21", "v11", "v12"],
   "12": ["h12", "h22", "v12", "v13"],
@@ -60,7 +75,9 @@ const Map<String, List<String>> riscosAreas = {
 User jogadorAtual = User.me;
 
 int pontosUsuario = 0;
+int indexCorUsuario = 0;
 int pontosRobot = 0;
+int indexCorRobot = 1;
 
 List<String> jogadasRestantes = [
   "h11",

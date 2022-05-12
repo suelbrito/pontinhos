@@ -26,7 +26,7 @@ class Pontuacao extends StatelessWidget {
                 ])),
             width: 90,
             height: 70,
-            color: Colors.blue.shade300),
+            color: globals.coresLight[globals.indexCorUsuario]),
         const SizedBox(width: 10),
         Container(
             child: Center(
@@ -41,7 +41,7 @@ class Pontuacao extends StatelessWidget {
                 ])),
             width: 90,
             height: 70,
-            color: Colors.red.shade300)
+            color: globals.coresLight[globals.indexCorRobot])
       ])
     ]);
   }

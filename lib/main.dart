@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pontinhos/screens/game_screen.dart';
 import 'package:pontinhos/screens/help_screen.dart';
 import 'package:pontinhos/screens/matches_screen.dart';
+import 'package:pontinhos/screens/settings_screen.dart';
 import 'package:pontinhos/screens/tabs_screen.dart';
 import 'package:pontinhos/utils/app_routes.dart';
 
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
         AppRoutes.GAME: (ctx) => const GameScreen(),
         AppRoutes.HELP: (ctx) => const HelpScreen(),
         AppRoutes.MATCHES: (ctx) => const MatchesScreen(),
-        //AppRoutes.SETTINGS: (ctx) => SettingsScreen(),
+        AppRoutes.SETTINGS: (ctx) => const SettingsScreen(),
       },
     );
   }
