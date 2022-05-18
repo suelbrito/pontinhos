@@ -31,7 +31,11 @@
 .pub/
 .vscode/
 /build/
-windows/
+/android/
+/ios/
+/test/
+/web/
+/windows/
 
 # Web related
 lib/generated_plugin_registrant.dart
